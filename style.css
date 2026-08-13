@@ -1,96 +1,276 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:linear-gradient(to right,#d4fc79,#96e6a1);
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#2e7d32;
-    color:white;
-    text-align:center;
-    padding:25px;
-    box-shadow:0 4px 8px gray;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #fffde7);
+    color: #333;
 }
 
-header h1{
-    margin:0;
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #087f23, #16a34a);
+    color: white;
+
+    padding: 25px 8%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 4px 10px #999;
 }
 
-header p{
-    margin-top:10px;
+.logo {
+    font-size: 55px;
 }
 
-main{
-    width:90%;
-    max-width:900px;
-    margin:30px auto;
+header h1 {
+    margin: 0;
+    font-size: 30px;
 }
 
-.search-box{
-    display:flex;
-    gap:10px;
+header p {
+    margin: 8px 0 0;
 }
 
-.search-box input{
-    flex:1;
-    padding:15px;
-    font-size:16px;
-    border:1px solid #ccc;
-    border-radius:8px;
+
+/* CONTAINER */
+
+.container {
+    width: 85%;
+    margin: 35px auto;
 }
 
-.search-box button{
-    padding:15px 25px;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
+
+/* SEARCH */
+
+.search-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px #ccc;
 }
 
-.search-box button:hover{
-    background:#1b5e20;
+.search-section h2 {
+    color: #087f23;
 }
 
-#result{
-    margin-top:25px;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
+
+/* SEARCH BOX */
+
+.search-box {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
+input {
+    width: 350px;
+
+    padding: 14px;
+
+    border: 2px solid #16a34a;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
 }
 
-th{
-    background:#2e7d32;
-    color:white;
-    padding:12px;
+input:focus {
+    border-color: #087f23;
 }
 
-td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:center;
+
+button {
+    padding: 14px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #087f23
+    );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-tr:nth-child(even){
-    background:#f2f2f2;
+button:hover {
+    transform: scale(1.05);
 }
 
-h2{
-    color:#2e7d32;
+
+.hint {
+    color: #777;
+
+    font-size: 14px;
 }
 
-footer{
-    margin-top:40px;
-    background:#2e7d32;
-    color:white;
-    text-align:center;
-    padding:15px;
+
+/* RESULT */
+
+#result {
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+#result h2 {
+    color: #087f23;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    margin-top: 20px;
+
+    box-shadow: 0 5px 15px #ccc;
+}
+
+th {
+    background: #087f23;
+
+    color: white;
+
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+
+    border: 1px solid #ddd;
+}
+
+
+/* OFFER */
+
+td:nth-child(3) {
+    color: red;
+
+    font-weight: bold;
+}
+
+
+/* FINAL PRICE */
+
+td:nth-child(4) {
+    color: green;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* BEST DEAL */
+
+#result h3 {
+    background: #e8f5e9;
+
+    color: #087f23;
+
+    padding: 18px;
+
+    border-left: 6px solid green;
+
+    border-radius: 8px;
+}
+
+
+/* AI */
+
+#result p {
+    background: #fff3cd;
+
+    padding: 18px;
+
+    border-radius: 8px;
+}
+
+#result p b {
+    color: purple;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #087f23;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 150px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
 }
